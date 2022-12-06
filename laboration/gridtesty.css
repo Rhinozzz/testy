@@ -1,0 +1,148 @@
+
+  
+  .css-grid__container{
+    display: grid;
+    gap: .5rem;
+    
+  }
+  .css-grid__item{
+    display: flex;
+    min-height: 4rem;
+  }
+  .css-grid__item p{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+    .css-grid__container{
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(10, 5rem);
+      grid-template-areas: 
+      "B1 B1 B1 B1"
+      "B2 B2 B2 B2"
+      "B3 B3 B3 B3"
+      "B4 B4 B4 B4"
+      "B5 B5 B5 B6"
+      "B7 B8 B8 B8"
+      "B9 B9 B10 B10"
+      "B11 B11 B11 B12"
+      "B13 B13 B13 B13"
+      "B14 B14 B14 B14"
+      
+      
+    }
+    
+  .css-grid__item{
+    justify-items: center;
+    align-items: center;
+    min-height: 5rem;
+  }
+  
+  .css-grid__item:nth-child(1 ){grid-area: B1;}
+  .css-grid__item:nth-child(2 ){grid-area: B2;}
+  .css-grid__item:nth-child(3 ){grid-area: B3;}
+  .css-grid__item:nth-child(4 ){grid-area: B4;}
+  
+  .css-grid__item:nth-child(5 ){grid-area: B5;}
+  .css-grid__item:nth-child(6 ){grid-area: B6;}
+  .css-grid__item:nth-child(7 ){grid-area: B7;}
+  .css-grid__item:nth-child(8 ){grid-area: B8;} /*-ms-grid-row-span: +/1, titta på favorit, edge*/
+  
+  .css-grid__item:nth-child(9 ){grid-area: B9;}     /*samla ihop mindre celler i en ? typ som resten av cellerna */
+  .css-grid__item:nth-child(10 ){grid-area: B10;}
+  .css-grid__item:nth-child(11 ){grid-area: B11;}
+  .css-grid__item:nth-child(12 ){grid-area: B12;}
+  .css-grid__item:nth-child(13 ){grid-area: B13;}
+  .css-grid__item:nth-child(14 ){grid-area: B14;}
+  
+  
+  
+  @media screen and (min-width:750px) {
+  .css-grid__container{
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 10rem); /* av någon anledning förstoras elementet 8 0 9 när den är större än en specifik storlek*/
+    grid-template-areas: 
+    "BOX1 BOX1 BOX1 BOX2 BOX2"  /* 3o 4 byta plats*/
+     "BOX1 BOX1 BOX1 BOX4 BOX4"
+     "BOX3 BOX3 BOX3 BOX3 BOX3"
+     "BOX5 BOX5 BOX5 BOX7 BOX7"
+     "BOX6 BOX6 BOX6 BOX7 BOX7"
+     "BOX8 BOX9 BOX10 BOX7 BOX7"
+     "BOX11 BOX11 BOX10 BOX7 BOX7"
+     "BOX12 BOX13 BOX14 BOX14 BOX14"
+   
+  }
+  
+  .css-grid__item{
+    justify-items: center;
+    align-items: center;
+    min-height: 5rem;
+  }
+  .css-grid__item:nth-child(1 ){grid-area: BOX1;}
+  .css-grid__item:nth-child(2 ){grid-area: BOX2;}
+  .css-grid__item:nth-child(3 ){grid-area: BOX3;}
+  .css-grid__item:nth-child(4 ){grid-area: BOX4;}
+  .css-grid__item:nth-child(4 ){background-color: var(--clr4);}
+  
+  .css-grid__item:nth-child(5 ){grid-area: BOX5;}
+  .css-grid__item:nth-child(6 ){grid-area: BOX6;}
+  .css-grid__item:nth-child(7 ){grid-area: BOX7;}
+  .css-grid__item:nth-child(8 ){grid-area: BOX8;} /*-ms-grid-row-span: +/1, titta på favorit, edge*/
+  
+  .css-grid__item:nth-child(9 ){grid-area: BOX9;}     /*samla ihop mindre celler i en ? typ som resten av cellerna */
+  .css-grid__item:nth-child(10 ){grid-area: BOX10;}
+  .css-grid__item:nth-child(11 ){grid-area: BOX11;}
+  .css-grid__item:nth-child(12 ){grid-area: BOX12;}
+  .css-grid__item:nth-child(13 ){grid-area: BOX13;}
+  .css-grid__item:nth-child(14 ){grid-area: BOX14;}
+  }
+  
+  @media screen and (min-width:1024px) {
+    .css-grid__container{
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 8rem);
+  grid-template-areas: 
+  "L8 L1 L1 L1 L2 L2"
+  "L4 L1 L1 L1 L5 L5"
+  "L6 L9 L3 L3 L11 L12"
+  "L7 L10 L3 L3 L13 L14"
+    }
+  .css-grid__item:nth-child(1 ){grid-area: L1;}
+  .css-grid__item:nth-child(2 ){grid-area: L2}
+  .css-grid__item:nth-child(3 ){grid-area: L3}
+  .css-grid__item:nth-child(4 ){grid-area: L4}
+  .css-grid__item:nth-child(5 ){grid-area: L5}
+  .css-grid__item:nth-child(6 ){grid-area: L6}
+  .css-grid__item:nth-child(7 ){grid-area: L7}
+  
+  .css-grid__item:nth-child(8 ){grid-area: L8}
+  .css-grid__item:nth-child(8 ){
+    background-color: var(--clr4);
+    border-top: 1.5rem solid ;
+    border-left: 1.5rem solid;
+    border-top-left-radius: 3rem;
+    border-color: var(--clr6);
+  }
+  .css-grid__item:nth-child(9 ){grid-area: L9}
+  .css-grid__item:nth-child(10 ){grid-area: L10}
+  .css-grid__item:nth-child(11 ){grid-area: L11}
+  .css-grid__item:nth-child(12 ){grid-area: L12}
+  .css-grid__item:nth-child(13 ){grid-area: L13}
+  .css-grid__item:nth-child(14 ){grid-area: L14}
+  .css-grid__item:nth-child(14 ){
+    border-bottom: 1.5rem solid;
+    border-right: 1.5rem solid;
+    border-bottom-right-radius: 3rem;
+    border-color: var(--clr6);
+  }
+
+  .css-grid__item{
+    min-height: 6rem;
+  }
+  .css-grid__item:nth-child(4 ){
+    background-color: var(--clr5);
+  }
+  
+  
+  }
